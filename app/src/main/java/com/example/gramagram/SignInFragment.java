@@ -55,8 +55,7 @@ public class SignInFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {super.onViewCreated(view, savedInstanceState);
 
         navController = Navigation.findNavController(view);
 
@@ -77,20 +76,13 @@ public class SignInFragment extends Fragment {
             }
         });
 
-        emailSignInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                accederConEmail();
-            }
-        });
-
+        googleSignInButton = view.findViewById(R.id.googleSignInButton);
         activityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
                     public void onActivityResult(ActivityResult result) {
                         if (result.getResultCode() == Activity.RESULT_OK) {
-                // There are no request codes
                             Intent data = result.getData();
                             try {
                                 firebaseAuthWithGoogle(GoogleSignIn.getSignedInAccountFromIntent(data).getResult(ApiException.class));
@@ -101,7 +93,6 @@ public class SignInFragment extends Fragment {
                         }
                     }
                 });
-
         googleSignInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -166,7 +157,6 @@ public class SignInFragment extends Fragment {
                             }
                         });
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {

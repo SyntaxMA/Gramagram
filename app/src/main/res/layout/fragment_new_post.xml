@@ -8,18 +8,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <Button
-            android:id="@+id/publishButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:text="Publish"
-            android:layout_gravity="end"/>
         <EditText
             android:id="@+id/postContentEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="¿Qué pasa contigo?"
+            android:hint="¿Qué quieres decir?"
             android:textSize="24sp"
             android:lines="6"
             android:gravity="top|left">
@@ -27,16 +20,26 @@
         </EditText>
         <ImageView
             android:id="@+id/previsualizacion"
+            android:layout_gravity="center"
             android:layout_width="200dp"
-            android:layout_height="wrap_content" />
-        <LinearLayout
+            android:layout_height="200dp" />
+        <Button
+            android:id="@+id/publishButton"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Publish"
+            android:layout_gravity="end"/>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
                 <Button
                     android:id="@+id/imagen_galeria"
                     android:layout_width="64dp"
@@ -59,6 +62,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
                 android:orientation="horizontal">
                 <Button
                     android:id="@+id/camara_fotos"

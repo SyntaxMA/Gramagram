@@ -116,6 +116,7 @@ public class HomeFragment extends Fragment {
                         .update("likes."+uid, post.likes.containsKey(uid) ?
                                 FieldValue.delete() : true);
             });
+
             // Miniatura de media
             if (post.mediaUrl != null) {
                 holder.mediaImageView.setVisibility(View.VISIBLE);

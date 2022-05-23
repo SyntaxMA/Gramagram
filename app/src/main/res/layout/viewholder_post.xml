@@ -37,13 +37,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:text="Author"/>
+                    android:text="Nombre autor"/>
                 <TextView
                     android:id="@+id/dateTextView"
                     style="@style/Base.TextAppearance.AppCompat.Small"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="23dp"/>
+                    android:text="Fecha"
+                    android:layout_marginLeft="20dp"/>
             </LinearLayout>
             <TextView
                 android:id="@+id/contentTextView"
